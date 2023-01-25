@@ -1,4 +1,4 @@
-const DUMMY_EVENTS = [
+const DUMMY_ITEMS = [
     {
       id: 'e1',
       title: 'South Indian',
@@ -32,26 +32,3 @@ const DUMMY_EVENTS = [
     
     
   ];
-
-  export function getFeaturedEvents() {
-    return DUMMY_EVENTS.filter((event) => event.isFeatured);
-  }
-  
-  export function getAllEvents() {
-    return DUMMY_EVENTS;
-  }
-  
-  export function getFilteredEvents(itemsFilter) {
-    const { name, cost } = itemsFilter;
-  
-    let filteredEvents = DUMMY_EVENTS.filter((event) => {
-      const eventDate = new Date(event.date);
-      return eventDate.getFullYear() === year && eventDate.getMonth() === month - 1;
-    });
-  
-    return filteredEvents;
-  }
-  
-  export function getEventById(id) {
-    return DUMMY_EVENTS.find((event) => event.id === id);
-  }

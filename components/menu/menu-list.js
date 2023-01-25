@@ -1,19 +1,15 @@
-function MenuList(){
+import classes from './menu-list.module.css';
+import MenuGrid from './menu-grid';
+
+function MenuList(props){
 
     return (
-        <ul className={classes.list}>
-         {items.map(event => <EventItem 
-            key = {event.id}
-            id = {event.id} 
-            title = {event.title} 
-            location={event.location}
-            date ={event.date}
-            image = {event.image}
-         />
-          
-         )}
-        </ul>
-    )
-    
+        <section className={classes.posts}>
+        <h1>All menu</h1>
+        <MenuGrid posts={props.posts} />
+      </section>
+  
+        );
+
 }
 export default MenuList;
