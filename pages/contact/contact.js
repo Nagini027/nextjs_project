@@ -5,5 +5,6 @@ function ContactPage(){
             
         </div>
     )
+    
 }
 export default ContactPage;

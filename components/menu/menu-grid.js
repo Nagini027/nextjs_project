@@ -5,6 +5,7 @@ function MenuGrid(props){
    
     const { menus } = props;
       
+    
     return (
         <ul className={classes.grid}>
         {menus.map((menu) => (

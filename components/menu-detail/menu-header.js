@@ -5,6 +5,7 @@ import classes from './menu-header.module.css';
 function MenuHeader(props) {
   const { title, image } = props;
 
+  
   return (
     <header className={classes.header}>
       <h1>{title}</h1>

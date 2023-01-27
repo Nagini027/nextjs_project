@@ -10,6 +10,7 @@ function MenuContent(props){
         <article className={classes.content}>
       <MenuHeader title={menu.title} image={imagePath} />
    </article>
+   
         /* <Image
               src={`/images/${menu.slug}`}
               width={600}
