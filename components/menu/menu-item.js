@@ -3,13 +3,12 @@ import Image from "next/image";
 import classes from './menu-item.module.css';
 
 function MenuItem(props){
-    const { title, image, slug } = props.menu;
-   
-    const imagePath ='/images/menus/${slug}/${image}';
-    const linkPath = `/menu/${slug}`;
-
-    return (
+    const { title, image,slug } = props.menu;
     
+    const imagePath =`/images/menus/${slug}/${image}`;
+    const linkPath = `/menu/${slug}`;
+    return (
+        
         <li className={classes.post}>
         <Link href={linkPath}>
           <div className={classes.image}>

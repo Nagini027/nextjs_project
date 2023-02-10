@@ -1,7 +1,8 @@
+import MenuSearch from '@/components/menu/menu-search';
 import Head from 'next/head';
 import { Fragment } from 'react';
 
-import MenuList from '@/components/menu/menu-list';
+
 function AllMenusPage(props) {
   return (
     <Fragment>
@@ -12,7 +13,9 @@ function AllMenusPage(props) {
           content='A list of all programming-related tutorials and posts!'
         />
       </Head>
-      <MenuList menus={props.menu} />
+       <MenuSearch />
+       
+      {/* <MenuList menu={props.menus} /> */}
     </Fragment>
   );
 }

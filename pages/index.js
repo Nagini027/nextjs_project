@@ -1,8 +1,8 @@
 import Content from '@/components/layout/content';
 import FeaturedMenu from '@/components/layout/featured-menu';
 import Layout from '@/components/layout/layout';
-import Head from 'next/head'
-import Image from 'next/image';
+// import Head from 'next/head'
+// import Image from 'next/image';
 
 const DUMMY_ITEMS = [
   {
@@ -40,7 +40,7 @@ const DUMMY_ITEMS = [
   
 ];
 
- function HomePage() {
+ function HomePage(props) {
   
   return (
   
@@ -48,7 +48,10 @@ const DUMMY_ITEMS = [
             
            <Layout />
            <Content/>
-           <FeaturedMenu menus = {DUMMY_ITEMS}/>
+           <FeaturedMenu menu = {DUMMY_ITEMS}/>
+           {/* <FeaturedMenu menus={props.menus} /> */}
+
+            
            {/* <Image src='/images/gallery-img.jpg' width={128} height={77} /> */}
              {/* <h1 className="text-3xl font-bold underline">
       Hello world!

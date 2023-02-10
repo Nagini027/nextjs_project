@@ -4,9 +4,10 @@ import MenuGrid from './menu-grid';
 function MenuList(props){
 
     return (
-        <section className={classes.posts}>
-        <h1>All menu</h1>
-        <MenuGrid posts={props.posts} />
+        <section className={classes.menus}>
+        {/* <h1>menu</h1> */}
+
+        {/* <MenuGrid menus={props.menus} /> */}
       </section>
   
         );

@@ -3,12 +3,12 @@ import MenuItem from './menu-item';
 
 function MenuGrid(props){
    
-    const { menus } = props;
+    const { menu } = props;
       
     return (
         <ul className={classes.grid}>
-        {menus.map((menu) => (
-          <MenuItem key={menu.slug} menu={menu} />
+        {menu.map((menus) => (
+          <MenuItem key={menus.slug} menu={menu} />
         ))}
       </ul>
   

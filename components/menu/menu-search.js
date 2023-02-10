@@ -1,22 +1,24 @@
-import  classes from '/menu-search.module.css';
+// import  classes from '/menu-search.module.css';
+import classes from './menu-search.module.css';
+import Button from '../ui/button';
 function MenuSearch(props){
-    const yearInputRef = useRef();
-    const monthInputRef = useRef();
-    function submitHandler(event){
-         event.preventDefault();
+    // const yearInputRef = useRef();
+    // const monthInputRef = useRef();
+    // function submitHandler(event){
+    //      event.preventDefault();
         
-         const selectedMenu = yearInputRef.current.value;
-         const selectedCost = monthInputRef.current.value;
+    //      const selectedMenu = yearInputRef.current.value;
+    //      const selectedCost = monthInputRef.current.value;
          
-         props.onSearch(selectedYear, selectedMonth);
-    }
+    //      props.onSearch(selectedYear, selectedMonth);
+    // }
     
     return( 
-        <form className={classes.form} onSubmit={submitHandler}>
+        <form className={classes.form} >
          <div className={classes.control}>
             <div className={classes.control}>
                 <label htmlFor="menu">Menu</label>
-                <select id="menu" ref={menuInputRef}>
+                <select id="menu" >
                     <option value= "Biryani">Biryani</option>
                     <option value="Tifins">Tifins</option>
                     <option value="pizza">Pizza</option>
@@ -26,25 +28,17 @@ function MenuSearch(props){
                 </select>
             </div>
          <div className={classes.control}>
-            <label htmlFor="sort">Sort by</label>
-            <select id="sort" ref={sortInputRef}>
+            <label htmlFor="sort">sortby</label>
+            <select id="sort">
                 <option value = "1"></option>
-                <option value = "2">February</option>
-                <option value = "3">March</option>
-                <option value = "4">April</option>
-                <option value = "5">May</option>
-                <option value = "6">June</option>
-                <option value = "7">July</option>
-                <option value = "8">August</option>
-                <option value = "9">September</option>
-                <option value = "10">October</option>
-                <option value = "11">November</option>
-                <option value = "12">December</option>           
-        
+                <option value = "2">high to low</option>
+                <option value = "3">low to high</option>
+                <option value = "4"></option>
+               
             </select>
             </div>
          </div>
-         <Button>Find Events</Button>
+         <Button>Search</Button>
        </form>
        );
 }
